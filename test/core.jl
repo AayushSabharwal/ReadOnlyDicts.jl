@@ -32,8 +32,7 @@ end
     k1 = ones(2)
     k2 = ones(2)
     dvec = ReadOnlyDict(k1 => 1)
-    tmp = Memory{Float64}(undef, 2)
-    fill!(tmp, 1.0)
+    tmp = trues(2)
 
     @testset "length" begin
         @test length(d) == 2
