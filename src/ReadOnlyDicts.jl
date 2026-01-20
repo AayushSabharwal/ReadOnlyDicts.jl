@@ -41,7 +41,7 @@ Base.iterate(rod::ReadOnlyDict, state...) = iterate(rod.inner, state...)
 
 Base.parent(rod::ReadOnlyDict) = rod.inner
 
-Base.sizehint!(rod::ReadOnlyDict, n; kwargs...) = throw(MethodError(sizehint!, (rod, n)))
+Base.sizehint!(rod::ReadOnlyDict, n) = throw(MethodError(sizehint!, (rod, n)))
 
 Base.filter!(f, rod::ReadOnlyDict) = throw(MethodError(filter!, (f, rod)))
 
